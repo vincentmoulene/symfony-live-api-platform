@@ -1,0 +1,16 @@
+App\Entity\Car:
+    car_{1..100}:
+        brand: '<company()>'
+        model: '<company()>'
+        plateNumber: '<uuid()>'
+
+App\Entity\Ride:
+    ride_{1..500}:
+        startPlace: '<address()>'
+        endPlace: '<address()>'
+        car: '@car_*'
+
+App\Entity\User:
+    user_kevin:
+        email: 'kevin@les-tilleuls.coop'
+        password: '\$argon2i\$v=19\$m=1024,t=2,p=2\$eGkwc0QwdE9Cd1ZhR2RqZA\$QlTY1Sw8DuxvjiqPerGd7FU/11GA4jiqQAC1gUmd0nI' 
